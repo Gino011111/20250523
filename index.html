@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>光影捕手：天氣挑戰</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #333;
+            font-family: Arial, sans-serif;
+            color: #eee;
+        }
+        canvas {
+            display: block;
+            border: 2px solid #555;
+            border-radius: 8px;
+        }
+        #explanation-card {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.85);
+            border: 2px solid #00BFFF; /* 亮藍色邊框 */
+            border-radius: 10px;
+            padding: 25px 35px;
+            text-align: center;
+            max-width: 80%;
+            box-shadow: 0 0 20px rgba(0, 191, 255, 0.6); /* 藍色光暈 */
+            animation: fadeIn 0.5s ease-out;
+            z-index: 1000;
+        }
+        #explanation-card h3 {
+            color: #FFD700; /* 金色標題 */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        #explanation-card p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        #explanation-card button {
+            background-color: #00BFFF;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        #explanation-card button:hover {
+            background-color: #008DCC;
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <script src="sketch.js"></script>
+</body>
+</html>
